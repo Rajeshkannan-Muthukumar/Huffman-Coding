@@ -56,6 +56,17 @@ def huffman_coding(Tree,left =True,binString=''):
 ```
 ### Calculate frequency of occurrence
 ```
+freq ={}
+for i in string:
+    if i in freq:
+        freq[i]+=1
+    else:
+        freq[i]=1
+freq = sorted(freq.items(),key=lambda x:x[1] ,reverse = True)
+print(freq)
+```
+### Create tree structure for huffman coding
+```
 nodes = freq
 while len(nodes) >1:
     (key1 , value1 ) = nodes[-1]
